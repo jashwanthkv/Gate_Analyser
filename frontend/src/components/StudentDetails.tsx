@@ -25,7 +25,7 @@ const StudentDetails: React.FC<{ student: Student }> = ({ student }) => {
   useEffect(() => {
     const fetchFeedback = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/feedback/${student.Regno}`);
+        const response = await axios.get(`https://gate-analyser.onrender.com/feedback/${student.Regno}`);
         setFeedback(response.data.feedback);
       } catch (error) {
         console.error("Error fetching feedback:", error);
